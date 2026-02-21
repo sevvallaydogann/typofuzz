@@ -1,13 +1,7 @@
-"""
-Domain Variation Generator Module
-Generates all possible typosquatting variations of a given domain.
-"""
-
 import itertools
 import re
 
 
-# Homoglyph mappings (visually similar characters)
 HOMOGLYPHS = {
     'a': ['à', 'á', 'â', 'ã', 'ä', 'å', 'ā', 'ă', 'ą', 'α', 'а'],
     'b': ['ḃ', 'ḅ', 'ƀ', 'ɓ'],
@@ -153,7 +147,7 @@ class DomainGenerator:
 
         return self.variations
 
-    # ── Typo Generation ────────────────────────────────────────────────────────
+    # Typo Generation 
 
     def _gen_missing_char(self):
         """Remove each character one at a time."""
@@ -214,7 +208,7 @@ class DomainGenerator:
             self._add(f"{name.replace('-', '')}.{self.tld}", "hyphenation")
             self._add(f"{name.replace('-', '.')}.{self.tld}", "hyphenation")
 
-    # ── Homoglyphs ─────────────────────────────────────────────────────────────
+    # Homoglyphs 
 
     def _gen_homoglyphs(self):
         """Replace characters with visually similar Unicode characters (limited set)."""
@@ -229,7 +223,7 @@ class DomainGenerator:
                     except (UnicodeError, UnicodeDecodeError):
                         pass
 
-    # ── TLD Variations ─────────────────────────────────────────────────────────
+    # TLD Variations
 
     def _gen_tld_variations(self):
         """Try different TLDs."""
@@ -248,7 +242,7 @@ class DomainGenerator:
             chars[i], chars[i+1] = chars[i+1], chars[i]
             self._add(f"{self.name}.{''.join(chars)}", "tld-typo")
 
-    # ── Subdomain Abuse ────────────────────────────────────────────────────────
+    # Subdomain Abuse 
 
     def _gen_subdomain_abuse(self):
         """Create subdomain-based phishing patterns."""
@@ -257,7 +251,7 @@ class DomainGenerator:
             self._add(f"{kw}.{self.name}.{self.tld}", "subdomain-abuse")
             self._add(f"{self.name}.{kw}.{self.tld}", "subdomain-abuse")
 
-    # ── Bitsquatting ───────────────────────────────────────────────────────────
+    # Bitsquatting 
 
     def _gen_bitsquatting(self):
         """Flip individual bits in each character of the domain name."""
@@ -271,7 +265,7 @@ class DomainGenerator:
                     new_name = name[:i] + flipped_char + name[i+1:]
                     self._add(f"{new_name}.{self.tld}", "bitsquatting")
 
-    # ── Combosquatting ─────────────────────────────────────────────────────────
+    # Combosquatting 
 
     def _gen_combosquatting(self, extra_keywords: list[str] = []):
         """Combine domain name with common keywords."""
