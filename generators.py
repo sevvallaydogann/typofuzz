@@ -81,7 +81,7 @@ COMBO_SUFFIXES = ['login', 'signin', 'account', 'support', 'help', 'service', 's
 class DomainGenerator:
     def __init__(self, domain: str):
         self.domain = domain.lower().strip()
-        # Parse domain
+        
         parts = self.domain.rsplit('.', 1)
         if len(parts) == 2:
             self.name = parts[0]
