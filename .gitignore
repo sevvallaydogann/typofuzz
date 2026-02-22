@@ -15,13 +15,13 @@ env/
 .venv/
 pip-wheel-metadata/
 
-# Reports (don't commit scan results)
+# Reports 
 reports/
 *.html
 *.json
 *.csv
 
-# API Keys (never commit!)
+# API Keys 
 .env
 .env.local
 config.local.yaml
