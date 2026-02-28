@@ -43,7 +43,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│     Domain Variation Engine                                    │
+│     Domain Variation Engine                                     │
 │      ├── Keyboard typos (QWERTY adjacency)                      │
 │      ├── Character insertion / deletion / transposition         │
 │      ├── Homoglyphs (visually similar Unicode characters)       │
@@ -52,42 +52,42 @@
 │      ├── Bitsquatting (bit-flip attack vector)                  │
 │      └── Combosquatting (targetlogin.com, securetarget.com)     │
 │                                                                 │
-│     DNS & Network Intelligence                                 │
-│      ├── A / AAAA / MX / NS / CNAME / TXT records              │
+│     DNS & Network Intelligence                                  │
+│      ├── A / AAAA / MX / NS / CNAME / TXT records               │
 │      ├── IPv4 + IPv6 resolution                                 │
 │      └── Parallel multi-threaded DNS queries                    │
 │                                                                 │
-│     HTTP/HTTPS Analysis                                        │
+│     HTTP/HTTPS Analysis                                         │
 │      ├── Status code checks                                     │
 │      ├── Redirect chain tracking                                │
 │      ├── Page title extraction                                  │
 │      └── Parked domain detection                                │
 │                                                                 │
-│     SSL Certificate Analysis                                   │
+│     SSL Certificate Analysis                                    │
 │      ├── Validity check                                         │
 │      ├── Issuer & SAN analysis                                  │
 │      ├── Self-signed / wildcard detection                       │
 │      └── SSL grade (A/B/C/F)                                    │
 │                                                                 │
-│     WHOIS Intelligence                                         │
+│     WHOIS Intelligence                                          │
 │      ├── Registrar information                                  │
 │      ├── Registration date (recently registered → high risk)    │
 │      └── Name server analysis                                   │
 │                                                                 │
-│     Threat Intelligence (Multi-Source)                        │
+│     Threat Intelligence (Multi-Source)                          │
 │      ├── VirusTotal API v3                                      │
 │      ├── URLhaus (Abuse.ch) — free, no key required             │
 │      └── AlienVault OTX — free, no key required                 │
 │                                                                 │
-│     Risk Scoring Engine (0–100)                                │
+│     Risk Scoring Engine (0–100)                                 │
 │      ├── 70-100 → 🔴 HIGH RISK                                  │
 │      ├── 40-69  → 🟡 MEDIUM RISK                                │
 │      └── 0-39   → 🟢 LOW RISK                                   │
 │                                                                 │
-│     Output Formats                                             │
-│      ├──  Interactive HTML report                             │
-│      ├──  JSON (for API / SIEM integration)                   │
-│      └──  CSV (for Excel / spreadsheet analysis)              │
+│     Output Formats                                              │
+│      ├──  Interactive HTML report                               │
+│      ├──  JSON (for API / SIEM integration)                     │
+│      └──  CSV (for Excel / spreadsheet analysis)                │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
