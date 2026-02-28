@@ -18,7 +18,6 @@
 [![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey?style=flat-square)]()
 [![Security](https://img.shields.io/badge/Purpose-Defensive%20Security-red?style=flat-square)]()
 
-*Detect, analyze, and report phishing & typosquatting domains impersonating your target.*
 
 </div>
 
