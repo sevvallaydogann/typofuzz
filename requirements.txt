@@ -1,0 +1,12 @@
+# TypoSquatch — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core
+requests>=2.31.0
+dnspython>=2.4.2
+python-whois>=0.9.4
+rich>=13.7.0
+
+# Optional (for extended features)
+# shodan>=1.31.0        # Shodan integration
+# censys>=2.2.9         # Censys integration
